@@ -1,0 +1,722 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color: #fff;
+    font-size: 16px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.wrapper {
+    background: -webkit-linear-gradient(0deg, rgb(60, 204, 234), rgb(24, 131, 216));
+    background: -moz-linear-gradient(0deg, rgb(60, 204, 234), rgb(24, 131, 216));
+    background: linear-gradient(0deg, rgb(60, 204, 234), rgb(24, 131, 216)); 
+    width: 100%;
+}
+.Info {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ШАПКА */
+header {
+    top: 0;
+    left: 0;
+    right: 0;
+    background:#032e57;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8%;
+}
+
+
+
+header nav ul li {
+    position: relative;
+    float: left;
+}
+
+header nav ul li a {
+    padding: 15px;
+    color: #fff;
+    font-size: 16px;
+    display: block;
+}  
+
+header nav ul li a:hover {
+    background:#6cd9fd;
+    color:#fff;
+    border-radius: 15px;
+}
+
+nav ul li ul {
+    position: absolute;
+    left: 0;
+    width: 180px;
+    background:#4584ff;
+    display: none;
+    z-index: 20;
+    border-radius: 15px;
+}
+
+nav ul li ul li {
+    width: 100%;
+    border: 1px solid rgba(0,0,0,.1);
+}
+
+nav ul li:hover > ul {
+    display: initial;
+}
+
+header nav ul li:not(.active):not(.btn) a:hover {
+     border-bottom: 5px solid #6cd9fd;
+}
+
+header nav ul li.btn a {
+    background: #6cd9fd;
+    padding: 9px 17px;
+    border-radius: 15px;
+    transition: all 500ms ease;
+    margin-left: 50px;
+}
+
+header nav ul li.btn a:hover {
+    background: #4584ff;
+}
+
+.trending {
+    padding-top: 50px;
+}
+
+.trending h1{
+    font-weight: 600;
+    font-size: 35px;
+    background: #032e57;
+    border-radius: 12px;
+    margin-right: 900px;
+    padding: 20px;
+}
+
+
+.trending .catch {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 50px 0;
+}
+
+.trending .catch span{
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 22px;
+}
+
+.trending .catch span img{
+    position: relative;
+    top: 5px;
+    margin-right: 7px;
+}
+
+.trending .catch  img{
+    border-radius: 30px;
+}
+.catch .block {
+    background: #3C9DD0;
+    color: #032e57;
+    border-radius: 30px;
+    padding: 20px 12px;
+    border: 0;
+    transition: all 500ms ease;
+    font-size: 18px;
+}
+.catch .block:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.main-text {
+    padding: 20px;
+    font-size: 35px;
+    font-weight: 600;
+    margin-right: 1090px;
+    width: 500px;
+    border-radius: 12px;
+    margin-top: 150px;
+    background: #032e57;
+}
+
+.catch .block span a {
+    color: #032e57;
+}
+
+.banner {
+    padding: 10px;
+}
+
+.banner p{
+    line-height: 170%;
+    margin-bottom: 20px;
+    width: 100%;
+    font-size: 23px;
+    background: #178bff;
+    border-radius: 30px;
+    padding: 20px 12px;
+}
+
+.banner .text1{
+    line-height: 170%;
+    margin-bottom: 20px;
+    width: 100%;
+    font-size: 23px;
+    background: #178bff;
+    border-radius: 30px;
+    padding: 20px 25px;
+}
+
+.banner ol{
+    line-height: 170%;
+    margin-bottom: 20px;
+    width: 100%;
+    font-size: 25px;
+    background: #178bff;
+    border-radius: 30px;
+    padding: 20px 25px;
+}
+
+.banner .text2{
+    line-height: 170%;
+    margin-bottom: 20px;
+    width: 100%;
+    font-size: 25px;
+    border-radius: 30px;
+    padding: 20px 25px;
+}
+
+/* ===== ТЕМА САЙТА ===== */
+
+/* Светлая тема (по умолчанию) */
+body {
+    background-color: #f5f7fa;
+    transition: background-color 0.4s ease;
+}
+
+/* Тёмная тема — МЕНЯЕТСЯ ТОЛЬКО ФОН */
+.wrapper {
+    transition: background 0.4s ease;
+}
+
+body.dark-theme .wrapper {
+    background: -webkit-linear-gradient(180deg, rgb(2, 29, 82), rgb(13, 77, 148));
+    background: -moz-linear-gradient(180deg, rgb(2, 29, 82), rgb(13, 77, 148));
+    background: linear-gradient(180deg, rgb(2, 29, 82), rgb(13, 77, 148));
+}
+
+/* Кнопка темы */
+.theme-toggle img {
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle img:hover {
+    transform: rotate(20deg) scale(1.1);
+}
+
+/* ЗАГОЛОВКИ */
+h2, h3, h4, h5, h6, h7, h8, h9, h10 {
+    font-size: 30px;
+    font-weight: 600;
+    padding: 15px;
+    
+}
+
+/*ИЗОБРАЖЕНИЯ*/
+.popl {
+    float: right; /* Перенос картинки направо */
+    margin-left: 20px; /* Отступ слева от текста */
+    margin-bottom: 10px; /* Отступ снизу */
+    max-width: 300px; /* Ограничение размера */
+    height: auto 
+
+
+}
+
+/* === ФОРМАТИРОВАНИЕ КАРТИНОК СПРАВА ВНУТРИ БЛОКА === */
+
+.banner ol {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 20px;
+    align-items: start;
+}
+
+.banner ol li,
+.banner ol p,
+.banner ol ul,
+.banner ol h3,
+.banner ol h4,
+.banner ol h5,
+.banner ol h6,
+.banner ol h7 {
+    grid-column: 1;
+}
+
+.popl {
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.popl img {
+    width: 100%;
+    max-width: 260px;
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+.banner ol {
+    margin-bottom: 30px;
+}
+
+@media (max-width: 900px) {
+    .banner ol {
+        grid-template-columns: 1fr;
+    }
+
+    .popl {
+        grid-column: 1;
+        margin-top: 15px;
+    }
+}
+
+/* === КАРТОЧКИ ДЛЯ СНАСТЕВЫХ БЛОКОВ === */
+
+.banner ol {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 35px;
+    margin: 40px 0;
+}
+
+/* Одна карточка */
+.banner ol > li {
+    list-style: none;
+    background: #178bff;
+    border-radius: 24px;
+    padding: 25px 30px;
+    font-size: 25px;
+    font-weight: 700;
+    color: #fff;
+}
+
+/* Обёртка для описаний и картинок */
+.banner ol > p,
+.banner ol > ul,
+.banner ol > .popl {
+    background: #178bff;
+    border-radius: 24px;
+    padding: 20px 30px;
+    margin-top: -15px;
+}
+
+/* Сетка внутри карточки */
+.banner ol > p,
+.banner ol > ul {
+    font-size: 23px;
+    line-height: 1.7;
+    color: #ffffff;
+}
+
+/* Картинки внутри карточек справа */
+.popl {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.popl img {
+    width: 280px;
+    max-width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* Отступы между элементами внутри карточки */
+.banner ol > ul li {
+    margin-bottom: 10px;
+}
+
+/* Визуальный эффект карточки */
+.banner ol > li,
+.banner ol > p,
+.banner ol > ul,
+.banner ol > .popl {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.text1 ul {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.text1 ul {
+    background: #178bff;
+    border-radius: 24px;
+    padding: 20px 30px;
+    margin-top: -15px;
+}
+
+/* Адаптация под мобильные */
+@media (max-width: 900px) {
+    .popl {
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    .popl img {
+        width: 220px;
+    }
+}
+
+/* === УВЕЛИЧЕНИЕ КАРТИНОК (LIGHTBOX) === */
+
+.img-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+    z-index: 9999;
+    cursor: zoom-out;
+}
+
+.img-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.img-modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+    transform: scale(0.85);
+    transition: 0.3s ease;
+}
+
+.img-modal.active img {
+    transform: scale(1);
+}
+
+/* Курсор увеличения на обычных картинках */
+.card-img img,
+.media-img img {
+    cursor: zoom-in;
+}
+
+/* === ПРОФЕССИОНАЛЬНЫЙ LIGHTBOX === */
+
+.img-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.88);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+    z-index: 9999;
+    cursor: zoom-out;
+}
+
+.img-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.img-modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.7);
+    transform: scale(0.85);
+    transition: transform 0.3s ease;
+    cursor: grab;
+}
+
+.img-modal.active img {
+    transform: scale(1);
+}
+
+/* Кнопка закрытия */
+.img-modal-close {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.2s;
+}
+
+.img-modal-close:hover {
+    transform: scale(1.2);
+}
+
+/* Курсор увеличения */
+.media-img img {
+    cursor: zoom-in;
+    transition: 0.2s;
+}
+
+.media-img img:hover {
+    transform: scale(1.03);
+}
+
+
+/* === КНОПКА НАВЕРХ === */
+
+.scroll-top {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: none;
+    background: #178bff;
+    color: #fff;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: 0.3s ease;
+    z-index: 9999;
+}
+
+/* Появление */
+.scroll-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Hover-эффект */
+.scroll-top:hover {
+    background: #0f6fd1;
+    transform: translateY(-4px);
+}
+
+/* === ПЛАВНЫЕ ПЕРЕХОДЫ МЕЖДУ СТРАНИЦАМИ === 
+
+body {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+body.page-loaded {
+    opacity: 1;
+}
+
+body.page-fade-out {
+    opacity: 0;
+}
+
+/* === PRELOADER (ИСПРАВЛЕННЫЙ) === 
+
+.preloader {
+    position: fixed;
+    inset: 0;
+    background:
+      linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+      url("../img/fon.png") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.6s ease;
+}
+
+.preloader.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+body {
+    background: #0b1a2a; /* запасной тёмный фон 
+} */
+
+/* === КНОПКА ГАЛЕРЕИ ТРОФЕЕВ === */
+
+.gallery-btn {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 25px;
+    transition: 0.2s;
+}
+
+.gallery-btn img {
+    width: 28px;
+    height: 28px;
+}
+
+.gallery-btn:hover {
+    background: rgba(255,255,255,0.25);
+    transform: translateY(-2px);
+}
+
+/* Всплывающая подсказка */
+.gallery-tooltip {
+    position: absolute;
+    bottom: -38px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.2s;
+}
+
+.gallery-btn:hover .gallery-tooltip {
+    opacity: 1;
+}
+
+/* === УНИВЕРСАЛЬНЫЕ ТЕКСТОВЫЕ БЛОКИ === */
+
+.text-block {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.text-block p {
+    margin: 0 0 10px 0;
+}
+
+.text-block p:last-child {
+    margin-bottom: 0;
+}
+
+.text-block ul,
+.text-block ol {
+    margin: 10px 0 0 20px;
+}
+
+.text-block li {
+    margin-bottom: 6px;
+}
+
+/* === БЛОК: ТЕКСТ + КАРТИНКА СПРАВА === */
+
+.media-right {
+    display: grid;
+    grid-template-columns: 1fr 260px;
+    gap: 20px;
+    align-items: center;
+}
+
+.media-right .media-text {
+    margin: 0;
+}
+
+.media-right .media-img img {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* Мобильная версия */
+@media (max-width: 900px) {
+    .media-right {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* === БЛОК: ТЕКСТ + КАРТИНКА СНИЗУ === */
+
+.media-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.media-bottom .media-img img {
+    width: 80%;
+    max-width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* === УВЕЛИЧЕНИЕ КАРТИНОК (LIGHTBOX) === */
+
+.img-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+    cursor: zoom-out;
+}
+
+.img-overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 16px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.6);
+    animation: zoomIn 0.25s ease;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to   { transform: scale(1);   opacity: 1; }
+}
+
+
+
+.media-text {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    border-radius: 16px;
+}
